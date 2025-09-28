@@ -3,10 +3,66 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mi Web</title>
+  <title>Pregunta importante</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #ffe4ec;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      position: relative;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+    }
+
+    #yes {
+      background-color: #ff4b7b;
+      color: white;
+    }
+
+    #no {
+      background-color: #ccc;
+      position: absolute;
+    }
+  </style>
 </head>
 <body>
-  <h1>¡Hola! Soy Renzo</h1>
-  <p>Esta es mi primera página web con GitHub Pages 🚀</p>
+
+  <h1>¿Quieres salir conmigo? 🥺👉👈</h1>
+  <div class="buttons">
+    <button id="yes" onclick="alert('¡Sabía que dirías que sí! 😍❤️')">Sí</button>
+    <button id="no">No</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('no');
+
+    noBtn.addEventListener('mouseover', () => {
+      const randomX = Math.random() * 200 - 100;
+      const randomY = Math.random() * 200 - 100;
+      noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    });
+  </script>
+
 </body>
 </html>
