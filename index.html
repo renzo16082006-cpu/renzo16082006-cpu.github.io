@@ -1,10 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Saludo</title>
+  <meta charset="utf-8" />
+  <title>Karaoke - El Cóndor Pasa</title>
+  <style>
+    body {
+      background: linear-gradient(180deg, #0b1020, #071021);
+      color: #e6eef8;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .karaoke {
+      text-align: center;
+    }
+    .line {
+      font-size: 2em;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    .line.active {
+      opacity: 1;
+      color: #ff577f;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hola Haru puta no mentira</h1>
+  <div class="karaoke">
+    <h1>Karaoke: El Cóndor Pasa</h1>
+    <div id="lyrics">
+      <div class="line">Oh majestuoso cóndor de las alturas</div>
+      <div class="line">Llévame a mi hogar en las montañas</div>
+      <div class="line">Oh majestuoso cóndor, quiero volver</div>
+      <div class="line">A la tierra que tanto amo</div>
+    </div>
+  </div>
+
+  <script>
+    const lines = document.querySelectorAll('.line');
+    let index = 0;
+
+    function showLine() {
+      lines.forEach(l => l.classList.remove('active'));
+      lines[index].classList.add('active');
+      index = (index + 1) % lines.length;
+    }
+
+    showLine(); // primera línea
+    setInterval(showLine, 4000); // cambia cada 4 segundos
+  </script>
 </body>
 </html>
