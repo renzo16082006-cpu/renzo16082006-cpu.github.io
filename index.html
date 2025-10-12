@@ -1,66 +1,42 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Karaoke - Himno Nacional del Perú</title>
-  <style>
-    body {
-      background: linear-gradient(180deg, #8B0000, #001f3f);
-      color: #fff;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .karaoke {
-      text-align: center;
-      max-width: 900px;
-    }
-    h1 {
-      margin-bottom: 20px;
-      color: #ffdd33;
-      text-shadow: 2px 2px 5px #000;
-    }
-    .line {
-      font-size: 2em;
-      opacity: 0;
-      transition: opacity 1s;
-    }
-    .line.active {
-      opacity: 1;
-      color: #ff577f;
-      text-shadow: 1px 1px 10px #fff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fons imatge sense repoticiosn</title>
+    <style>
+        body{
+            background-image: url(fondohtml/fondo.jpg);
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+        }
+        img {
+            width="600"
+            height="600"
+            border - radius : 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+        img:hover{
+            box-sharow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            transform: scale(1.1);
+            border-radius:25px;
+        }
+    </style>
 </head>
 <body>
-  <div class="karaoke">
-    <h1>Karaoke: Himno Nacional del Perú</h1>
-    <div id="lyrics">
-      <div class="line">¡Somos libres, seámoslo siempre!</div>
-      <div class="line">Seámoslo siempre, y antes niegue</div>
-      <div class="line">Sus luces el sol,</div>
-      <div class="line">Que faltemos al voto solemne</div>
-      <div class="line">Que la patria al eterno elevó,</div>
-      <div class="line">Que faltemos al voto solemne</div>
-      <div class="line">Que la patria al eterno elevó.</div>
-    </div>
-  </div>
-
-  <script>
-    const lines = document.querySelectorAll('.line');
-    let index = 0;
-
-    function showLine() {
-      lines.forEach(l => l.classList.remove('active'));
-      lines[index].classList.add('active');
-      index = (index + 1) % lines.length;
-    }
-
-    showLine(); // primera línea
-    setInterval(showLine, 4000); // cambia cada 4 segundos
-  </script>
+    <a
+    href="https://www.youtube.com/shorts/SXHMnicI6Pg"
+    targert="_blank"
+    >
+    <img 
+    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4c90c0f2-b2f8-4b4a-8fde-49f215125974/dg1khky-c50c9f03-ec60-44db-ae0e-eaec494b1613.jpg/v1/fit/w_512,h_768,q_70,strp/goku_jpeg_by_akira2037_dg1khky-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzY4IiwicGF0aCI6Ii9mLzRjOTBjMGYyLWIyZjgtNGI0YS04ZmRlLTQ5ZjIxNTEyNTk3NC9kZzFraGt5LWM1MGM5ZjAzLWVjNjAtNDRkYi1hZTBlLWVhZWM0OTRiMTYxMy5qcGciLCJ3aWR0aCI6Ijw9NTEyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.wPA2ug56cT5S5GM4UM4BhKoRKPHIlbtI4AmiVo61AK4"
+    alt="goku pe"
+    />
+</a>
 </body>
 </html>
